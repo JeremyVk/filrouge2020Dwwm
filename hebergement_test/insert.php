@@ -1,24 +1,10 @@
-<?php 
-//  Ouverture de la base de donnée 
-try {
-    // On se connecte à MySQL
-    $bdd = new PDO('mysql:host=localhost;dbname=gites_hebergement;charset=utf8', 'root', '');
-} catch (Exception $e) {
-    // En cas d'erreur, on affiche un message et on arrête tout
-    die('Erreur : ' . $e->getMessage());
-}
 
-// Si tout va bien, on peut continuer
-
-$nom = $_POST['nom'];
-$localisation = $_POST['localisation'];
-$note = $_POST['note'];
-
-
-
-$sql  = "INSERT INTO gites (nom, localisation, note) 
-            VALUES ('".$_POST["nom"]."','".$_POST["localisation"]."','".$_POST["note"]."')";
-            $query = $db->prepare($sql);
-
-        
-?>
+<form action="insert_traitement.php" method="post">
+             <label for="name">Nom du Gîte</label>
+             <input type="text" name="nom">
+             <label for="Localisation">Localisation du gîte</label>
+             <input type="text"name="localisation">
+             <label for="note">Note/5</label>
+             <input type="number" name="note" min="1" max="5">
+             <button type="submit" name="save">Enregistrez vos données</button>
+         </form>
