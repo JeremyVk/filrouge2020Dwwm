@@ -1,5 +1,5 @@
 <?php 
-include 'config_bdd_hebergement.php';
+include 'config_bdd_gite.php';
 // Récupération des données du formulaire
 $nom = $_POST['nom'];
 $localisation = $_POST['localisation'];
@@ -24,7 +24,7 @@ if ($req->execute(array(
     '<div class="alert-succes" role="alert">
         La news a bien été enregistrée<br>
         </div>';
-    echo '<a href="hebergement_gite.php">Retournez à la liste des tableaux</a>';
+    echo '<a href="gite.php">Retournez à la liste des tableaux</a>';
     
 } else{
     echo 'Problème d\'enregistrement';

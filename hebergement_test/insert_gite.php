@@ -1,5 +1,5 @@
 
-<form action="insert_traitement.php" method="post">
+<form action="insert_traitement_gite.php" method="post">
              <label for="name">Nom du Gîte</label>
              <input type="text" name="nom">
              <label for="Localisation">Localisation du gîte</label>
