@@ -58,7 +58,7 @@
              
 
                 <?php
-                include 'config_bdd_hebergement.php';
+                include 'config_bdd_gite.php';
                 // SELECTIONNE TOUT DANS LA BDD gites
                 $req = $bdd->query('SELECT * FROM gites');
                 // TANT QU'IL Y A DES DONNEES AFFICHE LES LIGNE PAR LIGNE DANS UN TABLEAU
@@ -101,7 +101,7 @@
          <h2>Ajoutez vos Ecogites de la région !</h2>
          <p>Tous les Ecogîtes du Var ne sont pas encore répertoriés, aidés nous à compléter notre base de donnée !</p>
          <?php 
-            include 'insert.php';
+            include 'insert_gite.php';
          ?>
                                         
          
