@@ -21,8 +21,9 @@ a {
 .header {
     max-width: 100%;
     height: auto;
-    background: no-repeat fixed url(img/background_page_accueil.jpg);
-    padding-bottom: 80px;
+    background: no-repeat fixed url(../img/background_page_accueil.jpg);
+    padding-bottom: 5vw;
+    padding-top: 10vw;
 }
 
 .logo_accueil {
@@ -85,6 +86,12 @@ a {
     margin: auto;
     padding-bottom: 30px;
 }
+.article_insert p{
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 30px;
+}
 
 .article_1 {
     background-color: white;
@@ -118,9 +125,27 @@ a {
 .table-gite thead th {
     text-align: center;
 }
+ .article_btn {
+    margin: auto;
+    text-align: center;
+    
+}
 
 
 /* END ARTICLES */
+
+/* form */
+
+
+
+.maj_form{
+    margin: 3vw auto;
+    display: flex;
+    justify-content: space-around; 
+}
+.maj_form label{
+    font-weight: bold;
+}
 
 
 /* FOOTER  */

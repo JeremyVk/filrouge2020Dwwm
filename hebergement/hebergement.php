@@ -1,21 +1,5 @@
-<?php $url = $_SERVER['PHP_SELF'] ;
-
-if(stristr($url, 'terre'))
-{
-	include "header_terre.php";
-}
-else if(stristr($url, 'mer'))
-{
-	include "header_mer.php";
-}
-else if(stristr($url, 'hebergement'))
-{
-	include "header_hebergement.php";
-}
-else if(stristr($url, 'activite'))
-{
-	include "header_activite.php";
-}
+<?php 
+include 'header_hebergement.php';
 
 ?>
 
@@ -26,23 +10,23 @@ else if(stristr($url, 'activite'))
         <div class="card col-xl-3 col-lg-3 col-md-3 col-sm-3">
             <h3>CAMPINGS</h3>
             
-             <img src="img/tente.jpg" >
-            <button type="button" class="btn btn-warning">CAMPING</button>
+            <img src="img/hebergement_camping.jpg">
+            <button type="button" class="btn btn-warning" style="margin-top: 10px;margin-bottom: 10px;">CAMPING</button>
         </div>
 
         <div class="card col-xl-3 col-lg-3 col-md-3 col-sm-3">
             <h3>GÎTES</h3>
             
-            <img src="img/gite.jpg">
-            <button type="button" class="btn btn-warning" > <a href="hebergement_gite.php">GÎTE</a> </button>
+            <img src="img/hebergement_gite.jpg">
+            <button type="button" class="btn btn-warning" style="margin-top: 10px;margin-bottom: 10px;"> <a href="gite.php">GÎTE</a> </button>
         </div>
 
 
         <div class="card col-xl-3 col-lg-3 col-md-3 col-sm-3">
             <h3>INSOLITES</h3>
             
-            <img src="img/insolite.jpg">
-            <button type="button" class="btn btn-warning">INSOLITE</button>
+            <img src="img/hebergement_insolite.jpg">
+            <button type="button" class="btn btn-warning" style="margin-top: 10px;margin-bottom: 10px;">INSOLITE</button>
         </div>
 
     </div>
