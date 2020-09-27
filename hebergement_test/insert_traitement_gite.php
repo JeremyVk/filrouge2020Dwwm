@@ -1,9 +1,10 @@
 <?php 
 include 'config_bdd_gite.php';
+include 'functions_gite.php';
 // Récupération des données du formulaire
-$nom = $_POST['nom'];
-$localisation = $_POST['localisation'];
-$note = $_POST['note'];
+$nom = valid_donnees($_POST['nom']);
+$localisation = valid_donnees($_POST['localisation']);
+$note = valid_donnees($_POST['note']);
 
 // verification de la reception des données
 /*

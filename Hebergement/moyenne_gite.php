@@ -14,7 +14,7 @@ session_start();
         $nombre_note ++ ;
                 round($note_moyenne = ($note_add/$nombre_note) );
                 
-                $req = $bdd->prepare("UPDATE gites SET note_moyenne = $note_moyenne, note_add = $note_add, nombre_note = $nombre_note WHERE id = $id");
+                $req = $bdd->prepare("UPDATE gites SET note_moyenne = '$note_moyenne', note_add = '$note_add', nombre_note = '$nombre_note' WHERE id = $id");
                 if($req->execute(array(
                     'note_moyenne' =>$note_moyenne,
                     'note_add' => $note_add,
