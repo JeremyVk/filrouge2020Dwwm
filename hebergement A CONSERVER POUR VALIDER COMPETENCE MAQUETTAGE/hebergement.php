@@ -27,14 +27,14 @@ else if(stristr($url, 'activite'))
             <h3>CAMPINGS</h3>
             
              <img src="img/tente.jpg" >
-            <button type="button" class="btn btn-warning">CAMPING</button>
+            <button type="button" class="btn btn-warning"style="margin-top: 10px;margin-bottom: 10px;">CAMPING</button>
         </div>
 
         <div class="card col-xl-3 col-lg-3 col-md-3 col-sm-3">
             <h3>GÎTES</h3>
             
             <img src="img/gite.jpg">
-            <button type="button" class="btn btn-warning">GÎTE</button>
+            <button type="button" class="btn btn-warning"style="margin-top: 10px;margin-bottom: 10px;">GÎTE</button>
         </div>
 
 
@@ -42,7 +42,7 @@ else if(stristr($url, 'activite'))
             <h3>INSOLITES</h3>
             
             <img src="img/insolite.jpg">
-            <button type="button" class="btn btn-warning">INSOLITE</button>
+            <button type="button" class="btn btn-warning"style="margin-top: 10px;margin-bottom: 10px;">INSOLITE</button>
         </div>
 
     </div>
