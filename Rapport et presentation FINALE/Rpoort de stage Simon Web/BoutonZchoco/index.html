@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+    integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <style>
+    .formType {
+      width: 974px;
+      margin-top: 200px;
+      margin-left: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      
+    }
+    .list-button {
+      display: flex;
+      justify-content: center;
+    }
+
+    .typehospital {
+      display: none;
+      
+    }
+
+    .hospital {
+      display: flex;
+      justify-content: flex-start;
+    }
+    .button:active{
+      border-bottom: 1px solid red;
+    }
+    .button{
+      border: none;
+      outline: none;
+     
+    }
+    .button:hover{
+      border-bottom: 1px solid red;
+    }
+    
+  </style>
+
+  <div class="formType">
+    <div class="list-button">
+
+      <button class="button button1 double-choco">Please send these complimentary assortments to my gift recipients with my order.</button>
+      <button class="button button2 hospital"> Please send them to the following hospital or charity:</button>
+      <button class="button button3 save-choco">Please save them in my zChocolat account for now, I will redeem them at a later time (no later than one year from today).</button>
+    </div>
+    <div class="typehospital">
+      <form action="" class="chooseHospital">
+        <div class="hospital"> <input type="radio" name="hospital"> <label for="">New York</label>
+        </div>
+        <div class="hospital"> <input type="radio" name="hospital"> <label for="">Paris</label>
+        </div>
+        <div class="hospital"> <input type="radio" name="hospital"> <label for="">Montreal</label>
+        </div>
+        <button type="submit">Envoyer</button>
+      </form>
+
+    </div>
+  </div>
+<script>
+
+      // Variables
+  const typeHospital = document.querySelector('.typehospital');
+  const button1 = document.querySelector('.button1');
+  const button2 = document.querySelector('.button2');
+  const button3 = document.querySelector('.button3');
+
+  
+
+  const hospital = document.querySelector('.hospital');
+
+      // Event listeners
+      // Button1 
+      if(button1.EventListener == 'click'){
+        button1.addEventListener('click', addBorder1);
+        button1.addEventListener('click', hidden);
+      }
+      else {
+        button1.addEventListener('mouseover', addBorder1Over);
+  button1.addEventListener('mouseout', cancelBorder1);
+      }
+  // button1.addEventListener('click', addBorder1);
+  // button1.addEventListener('click', hidden);
+  // button1.addEventListener('mouseover', addBorder1Over);
+  // button1.addEventListener('mouseout', cancelBorder1);
+
+
+
+
+
+  hospital.addEventListener('click', notHidden);
+  button2.addEventListener('click', addBorder2);
+
+  // button2.addEventListener('click',addBorder2);
+
+
+
+  button3.addEventListener('click', hidden);
+
+  button3.addEventListener('click', addBorder3);
+
+
+ 
+
+
+
+
+      // Functions
+
+      // Hidden/ Not hidden
+function notHidden() {
+  typeHospital.style.display = 'flex';
+  typeHospital.style.justifyContent = 'center';
+  button2.style.borderBottom = '1px solid red';
+
+}
+function hidden(){
+    typeHospital.style.display = 'none';
+  }
+
+// Add Borders Buttons1
+function addBorder1(event) {
+    button1.style.borderBottom = '1px solid red';
+    button2.style.border = ' none';
+    button3.style.border = 'none';
+
+  }
+  function addBorder1Over(event) {
+    button1.style.borderBottom = '1px solid red';
+    
+
+  }
+  function cancelBorder1(event) {
+    button1.style.borderBottom = 'none';
+    
+
+  }
+
+
+// Add Borders Buttons2
+function addBorder2(event) {
+  
+  button2.style.borderBottom = '1px solid red';
+  button1.style.border = 'none';
+  button3.style.border = 'none';
+
+  }
+  
+
+
+// Add Borders Buttons3
+function addBorder3(event) {
+    button3.style.borderBottom = '1px solid red';
+    button2.style.borderBottom = 'none';
+    button1.style.borderBottom = 'none';
+  }
+
+
+  
+
+</script>
+</body>
+
+</html>
